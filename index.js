@@ -20,7 +20,7 @@ app.post("/", (req, res) => {
   let uploadPath = __dirname + "/uploads" + filename;
   file.mv(uploadPath, (err) => {
     if (err) {
-      return res.send(Err);
+      return res.send(err);
     }
   });
   res.send(200);
